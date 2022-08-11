@@ -17,6 +17,7 @@ mongoose.connect(process.env.DATABASE_ACCESS, () => {
 });
 app.use(express.json());
 app.use(cors());
+app.use(express.static("uploads"));
 app.use("/app", routUrls);
 app.listen(3500, () => {
   console.log("Server runs in port 3500");

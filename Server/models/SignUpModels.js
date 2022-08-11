@@ -30,5 +30,15 @@ const signUpTemplate = new mongoose.Schema(
     versionKey: false,
   }
 );
-
+// signUpTemplate.statics.login = async function (email, password) {
+//   const user = await this.findOne({ email });
+//   if (user) {
+//     const auth = await compare(password);
+//     if (auth) {
+//       return user;
+//     }
+//     throw Error("incorrect password");
+//   }
+//   throw Error("incorrect Email");
+// };
 module.exports = mongoose.model("mytable", signUpTemplate, "mytable");
